@@ -1,6 +1,6 @@
 # start-game
 
-![By SerSa](./public/images/sersa.png)
+![By SerSa](./images/sersa.png)
 
 **A React application that is a simple game with the webpack, babel, pre-configured to get the job started faster.**
 

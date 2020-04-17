@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/slns/react-default.git"
+    "url": "git+https://github.com/slns/start-game.git"
   },
   "keywords": [
     "React",
@@ -37,9 +37,9 @@
   "author": "Sergio Santos",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/slns/react-default/issues"
+    "url": "https://github.com/slns/start-game/issues"
   },
-  "homepage": "https://github.com/slns/react-default#readme",
+  "homepage": "https://github.com/slns/start-game#readme",
   "devDependencies": {
     "@babel/core": "7.9.0",
     "@babel/node": "7.8.7",
