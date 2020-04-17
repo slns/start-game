@@ -1,0 +1,65 @@
+{
+  "name": "react-default",
+  "version": "1.0.0",
+  "description": "Default React aplication with React, Webpack, Babel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "babel-node ./node_modules/webpack/bin/webpack",
+    "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slns/react-default.git"
+  },
+  "keywords": [
+    "React",
+    "react-dom",
+    "Webpack",
+    "webpack-cli",
+    "webpack-dev-server",
+    "path",
+    "file-loader",
+    "html-webpack-plugin",
+    "Babel",
+    "@babel/core",
+    "@babel/node",
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/plugin-proposal-class-properties",
+    "babel-loader",
+    "style-loader",
+    "css-loader",
+    "sass-loader",
+    "node-sass",
+    "SerSa"
+  ],
+  "author": "Sergio Santos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slns/react-default/issues"
+  },
+  "homepage": "https://github.com/slns/react-default#readme",
+  "devDependencies": {
+    "@babel/core": "7.9.0",
+    "@babel/node": "7.8.7",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/preset-env": "7.9.0",
+    "@babel/preset-react": "7.9.4",
+    "babel-loader": "8.1.0",
+    "css-loader": "3.4.2",
+    "file-loader": "6.0.0",
+    "html-webpack-plugin": "4.0.3",
+    "node-sass": "4.13.1",
+    "path": "0.12.7",
+    "sass-loader": "8.0.2",
+    "style-loader": "1.1.3",
+    "webpack": "4.42.1",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.10.3"
+  },
+  "dependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  }
+}
