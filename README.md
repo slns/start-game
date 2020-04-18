@@ -1,6 +1,6 @@
 # start-game
 
-![By SerSa](./images/sersa.png)
+![By SerSa](./public/images/sersa.png)
 
 **A React application that is a simple game with the webpack, babel, pre-configured to get the job started faster.**
 
@@ -18,4 +18,4 @@
 
 > npm start
 
-After the command your application should start right in your default browser at localhost:8008, if you need change the port go to the file `webpack.config.js`
+After the command your application should start right in your default browser at localhost:3005, if you need change the port go to the file `webpack.config.js`, and in the file `server.js`

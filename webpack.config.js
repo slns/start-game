@@ -1,48 +1,48 @@
-import path from "path";
+'use strict'
 
-import HtmlWebpackPlugin from "html-webpack-plugin";
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
-    entry: path.join(__dirname, 'src', 'index.js'),
-    output: {
-        path: path.join(__dirname, 'build'),
-        filename: 'index.bundle.js'
-    },
-    mode: process.env.NODE_ENV || 'development',
-    resolve: {
-        modules: [path.resolve(__dirname, 'src'), 'node_modules']
-    },
-    devServer: {
-        contentBase: path.join(__dirname, 'src')
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: path.join(__dirname, 'src', 'index.html')
-        })
-    ],
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: ['babel-loader']
-            }, 
-            {
-                test: /\.(css|scss)$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'sass-loader'
-                ]
-            },
-            {
-                test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-                loaders: ['file-loader']
-            }
-        ]
-    },
-    devServer: {
-        inline: true,
-        port: 8008
-    },
-};
+	mode: 'development',
+	devtool: 'source-map',
+	entry: [
+		'babel-polyfill',
+		'react-hot-loader/patch',
+		'webpack-dev-server/client?http://localhost:3005',
+		'webpack/hot/only-dev-server',
+		path.join(__dirname, 'src', 'index')
+	],
+	output: {
+		path: path.join(__dirname, 'dist'),
+		filename: 'bundle.js',
+		publicPath: '/dist/'
+	},
+	plugins: [
+		new webpack.HotModuleReplacementPlugin()
+	],
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				include: /src/,
+				loader: 'babel-loader'
+			},
+			{
+				test: /\.json$/,
+				exclude: /node_modules/,
+				include: /src/,
+				loader: 'json-loader'
+			},
+			{
+				test: /\.(css|scss)$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					'sass-loader'
+				]
+			}
+		]
+	}
+}
