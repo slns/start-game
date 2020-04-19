@@ -4,9 +4,10 @@ import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 
-import App from './components/App';
+import App from './App';
 
 import "./index.scss"
+import '../node_modules/highlight.js/styles/ocean.css';
 
 const renderApp = (NextApp) => {
 	render(
@@ -21,8 +22,8 @@ const renderApp = (NextApp) => {
 renderApp(App)
 
 if (module.hot) {
-	module.hot.accept('./components/App', () => {
-		const NextApp = require('./components/App').default
+	module.hot.accept('./App', () => {
+		const NextApp = require('./App').default
 		renderApp(NextApp)
 	})
 }

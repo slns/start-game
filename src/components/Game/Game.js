@@ -1,13 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import utils from '../utils/math-utils';
+import utils from '../../utils/utils';
 import useGameState from './useGameState';
-import PlayAgain from '../PlayAgain/PlayAgain';
-import StarsDisplay from '../StarsDisplay/StarsDisplay';
-import PlayNumber from '../PlayNumber/PlayNumber';
+import PlayAgain from '../PlayAgain';
+import StarsDisplay from '../StarsDisplay';
+import PlayNumber from '../PlayNumber';
 
-//import '../../styles/index.scss';
-
+/** Game, component what include others components to start the game. */
 const Game = (props) => {
   const {
     stars,
@@ -74,5 +74,10 @@ const Game = (props) => {
     </div>
   );
 };
+
+Game.propTypes = {
+  /** Value to key id of the game */
+  startNewGame: PropTypes.number.isRequired
+}
 
 export default Game;

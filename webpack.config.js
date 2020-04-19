@@ -18,6 +18,12 @@ module.exports = {
 		filename: 'bundle.js',
 		publicPath: '/dist/'
 	},
+	resolve: {
+		extensions: ['.js', '.json', '.jsx'],
+		alias: {
+		  'start-game': path.resolve(__dirname, './src/components/')
+		}
+	  },
 	plugins: [
 		new webpack.HotModuleReplacementPlugin()
 	],

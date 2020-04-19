@@ -1,12 +1,12 @@
 'use strict'
 
 import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Container } from '@material-ui/core';
 
-import Footer from '../components/organisms/footer';
-import { listPublicRoutes, listPrivateRoutes } from './routes-list';
-import NotFound from '../components/pages/not-found';
+import Footer from '../organisms/footer';
+import { listPublicRoutes } from './routes-list';
+import NotFound from '../pages/not-found';
 
 export default function Router(props) {
 

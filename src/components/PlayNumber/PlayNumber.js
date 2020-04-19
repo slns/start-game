@@ -1,6 +1,5 @@
 import React from 'react';
-
-//import '../../styles/index.scss';
+import PropTypes from 'prop-types';
 
 const colors = {
   available: 'lightgray',
@@ -9,6 +8,7 @@ const colors = {
   candidate: 'deepskyblue',
 };
 
+/** Component to show the numbers buttons */
 const PlayNumber = (props) => (
   <button
     className="number"
@@ -18,5 +18,16 @@ const PlayNumber = (props) => (
     {props.number}
   </button>
 );
+
+PlayNumber.propTypes = {
+  /** Value to decide if in use or available */
+  status: PropTypes.string.isRequired,
+
+  /** Value to show the number of the button */
+  number: PropTypes.number.isRequired,
+
+  /** Called when button is clicked */
+  onClick: PropTypes.func.isRequired,
+}
 
 export default PlayNumber;

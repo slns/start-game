@@ -19,3 +19,7 @@
 > npm start
 
 After the command your application should start right in your default browser at localhost:3005, if you need change the port go to the file `webpack.config.js`, and in the file `server.js`
+
+#### Components Documentation
+
+> After run the aplication go to: `http://localhost:3005/docs`

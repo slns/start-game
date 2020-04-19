@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-//import '../../styles/index.scss';
-
+/** Component showing whether you won or lost and the button to restart */
 const PlayAgain = (props) => (
   <div className="game-done">
     <div
@@ -13,5 +13,17 @@ const PlayAgain = (props) => (
     <button onClick={props.onClick}>Play Again</button>
   </div>
 );
+
+PlayAgain.propTypes = {
+  /** Value to decide if lost game or win the game */
+  gameStatus: PropTypes.string,
+
+  /** Called when button is clicked */
+  onClick: PropTypes.func.isRequired,
+}
+
+PlayAgain.defaultProps = {
+  gameStatus: 'lost'
+};
 
 export default PlayAgain;

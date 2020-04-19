@@ -1,6 +1,6 @@
 'use strict'
 
-import StarMatch from '../components/StarMatch/StarMatch'
+import StarMatch from '../../components/StarMatch/StarMatch'
 //import SignUp from '../components/pages/sign-up'
 
 const listPublicRoutes = {
