@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://slns.github.io/start-game/",
   "scripts": {
     "prestart": "npm run gen:docs",
     "start": "npm-run-all --parallel start-game gen:docs-watch",
